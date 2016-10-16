@@ -1,0 +1,42 @@
+<ion-view view-title="Settings">
+  <ion-content>
+
+    <!-- Preferences -->
+    <div class="item item-divider">
+      Preferences
+    </div>
+    <ion-list>
+      <ion-checkbox ng-model="preferences.food">Food & Drink</ion-checkbox>
+      <ion-checkbox ng-model="preferences.nightlife">Nightlife</ion-checkbox>
+      <ion-checkbox ng-model="preferences.restaurants">Restaurants</ion-checkbox>
+      <ion-checkbox ng-model="preferences.shopping">Shopping</ion-checkbox>
+      <ion-checkbox ng-model="preferences.freetime">Freetime & Sports</ion-checkbox>
+      <ion-checkbox ng-model="preferences.culture">Art & Culture</ion-checkbox>
+    </ion-list>
+
+    <div class="padding">
+      <button class="button button-block button-positive" ng-click="updatePreferences(preferences)">
+        Update
+      </button>
+    </div>
+
+    <!-- Language -->
+    <div class="item item-divider">
+      Language
+    </div>
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Select
+        </div>
+        <select>
+          <option>German</option>
+          <option selected>English</option>
+          <option>Spanish</option>
+        </select>
+      </label>
+    </div>
+
+
+  </ion-content>
+</ion-view>

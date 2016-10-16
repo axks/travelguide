@@ -1,0 +1,69 @@
+<div ng-if="!offline">
+
+  <div class="padding">
+    <div style="margin: 20px 0px 30px 0;">
+      <a href="tel:+4915735984082" style="text-decoration: none;">
+        <button class="button button-full button-dark">
+          Call TravelAlex
+        </button>
+      </a>
+    </div>
+
+    <p>If you like to just say what you want, just call TravelAlex and ask. Alex delivers you the answers to your travel questions.</p>
+
+  </div>
+
+  <div class="list">
+
+    <a class="item item-avatar" href="#/tab/dash/everything">
+      <img src="img/everything.png">
+      <h2>Everything</h2>
+      <p>See erverything whats arround you.</p>
+    </a>
+
+    <a class="item item-avatar" href="#/tab/dash/sights">
+      <img src="img/sights.png">
+      <h2>Sights</h2>
+      <p>Just get the nearest sights.</p>
+    </a>
+
+    <a class="item item-avatar" href="#/tab/dash/shopping">
+      <img src="img/shopping.png">
+      <h2>Shopping</h2>
+      <p>Just get the nearest shopping option.</p>
+    </a>
+
+    <a class="item item-avatar" href="#/tab/dash/restaurants">
+      <img src="img/restaurants.png">
+      <h2>Restaurants</h2>
+      <p>Just get the best and nearest restaurants.</p>
+    </a>
+
+    <a class="item item-avatar" href="#/tab/dash/nightlife">
+      <img src="img/nightlife.png">
+      <h2>Nightlife</h2>
+      <p>Just get the best bars and clubs.</p>
+    </a>
+  </div>
+
+  <div id="map" data-tap-disabled="true"></div>
+</div>
+
+<div ng-if="offline" class="padding">
+
+  <div style="margin: 20px 0px 30px 0;">
+    <a href="tel:+4915735984082" style="text-decoration: none;">
+      <button class="button button-full button-dark">
+        Make call
+      </button>
+    </a>
+  </div>
+
+  <p>
+    You are <strong>Offline</strong>. You still can get informations about your souringings and many
+    other things provided by your Amazon Alexa over our phone service. Just hit "Make call"
+    and ask Alexa what you want to know.
+  </p>
+
+  <img src="img/maps_me.gif" width="100%" />
+</div>
