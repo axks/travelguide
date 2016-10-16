@@ -1,0 +1,71 @@
+<ion-view view-title="TravelAlexa">
+  <ion-content class="padding">
+
+    <div ng-if="!offline">
+
+      <!-- Aktualisieren -->
+      <ion-refresher pulling-text="Aktualsiieren" on-refresh="refresh()"></ion-refresher>
+
+        <div class="row">
+          <div class="col">
+            <button class="button button-block button-calm" ng-click="playAudioGuide()">
+              <i class="icon ion-headphone"></i> Audio Guide
+            </button>
+          </div>
+          <div class="col">
+            <a href="tel:+4915735984082" style="text-decoration: none;">
+              <button class="button button-full button-dark">
+                <i class="icon ion-ios-telephone"></i> Call TravelAlexa
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>If you like more information, just call TravelAlexa and ask. Alexa delivers you the answers to your travel questions.</p>
+          </div>
+        </div>
+
+      <div ng-repeat="info in data">
+        <div class="list card">
+          <div class="item item-dark">
+            <h2 style="color: #fff;">{{info.name}}</h2>
+          </div>
+          <div class="item item-body">
+            <center>
+              <img width="50%" src="{{info.image_url}}">
+            </center>
+            <p>
+              <center>
+                <button class="button button-balanced" ng-click="getDirection()">
+                  <i class="icon ion-map"></i> Get directions
+                </button>
+              </center>
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div ng-if="offline">
+
+    <div style="margin: 20px 0px 30px 0;">
+      <button class="button button-full button-dark" ng-click="sendSMS()">
+        Send coordinates
+      </button>
+    </div>
+
+    <p>
+      You are <strong>Offline</strong>. You still can get informations about your souringings and many
+      other things provided by your Amazon Alexa over our phone service. Just hit "Make call"
+      and ask Alexa what you want to know.
+    </p>
+
+    <img src="img/maps_me.gif" width="100%" />
+  </div>
+
+
+
+  </ion-content>
+</ion-view>
